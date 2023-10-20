@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/ebe1390a69.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>    
+                </ul>
+                <i class="fa-sharp fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav> 
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hi,I'm <span>Roshitha</span> <br>from India.</h1>
+            </div>
+        </div>
+    </div>
+    <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/images1/roshi.jpg" width="400px" height="400px" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub">About Me</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, eius nam?\
+                         Explicabo exercitationem laboriosam sequi nam quis, sapiente voluptate
+                        , facilis odit asperiores minima, accusamus dignissimos perferendis accusantium
+                         enim dolorum repellat?
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skill')">Skills</p>
+                        <p class="tab-links" onclick="opentab('edu')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skill">
+                        <ul>
+                            <li><span>Web Developer</span> <br>Web App Development</li>
+                            <li><span>Programmer</span> <br>Python Programmer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="edu">
+                        <ul>
+                            <li><span>2021-2025</span> <br>B.Tech from MallaReddy University</li>
+                            <li><span>2019-2021</span> <br>Inter from Sri Chaitanya Junior College</li>
+                            <li><span>2019</span><br>10th from Sri Sathya Sai Vidya Vihar High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!----------------Services--------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Designer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Nulla, veritatis?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Python Programmer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Nulla, veritatis?</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------Portfolio--------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub">My Work </h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="assets/images1/image1.jpg" width="400px" height="350px">
+                <div class="layer">
+                    <h3>Restaurant Website</h3>
+                    <p>It is the Homepage of Hungrezzz restaurant.It provides info about the services,features,ambience 
+                        and branches of the restaurant.
+                    </p>
+                    <a href="https://github.com/Roshitha56"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="assets/images1/img2.jpg" width="400px" height="350px">
+                <div class="layer">
+                    <h3>Python Coding</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ratione.
+                        Lorem ipsum dolor sit.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!--------=================Contact===============-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                <p><i class="fa-sharp fa-solid fa-square-phone"></i>0123456789</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+                <a href="#" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name">
+                    <input type="email" name="Email" placeholder="Your Email">
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    <script>
+        var link=document.getElementsByClassName('tab-links')
+        var content=document.getElementsByClassName('tab-contents')
+        function opentab(tabname)
+        {
+            for(a of link){
+                a.classList.remove("active-link")
+            }
+            for(b of content){
+                b.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+    </script>
+
+    <script>
+
+        var menu=document.getElementById("sidemenu");
+
+        function openmenu()
+        {
+            menu.style.right="0";
+        }
+        function closemenu()
+        {
+            menu.style.right="-200px";
+        }
+
+    </script>
+<!--====This IS FOR CONTACT DETAILS GOING TO GET ADDED INTO GOOGLE SPREADSHEET THAT SCRIPT-->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz13wg9uJBedt_lhxDK-saZrzFBlOO-PcLdDFDk51_-yNi1xTZOqMYfsppL9hGbKzn3/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+  
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message has been sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },3000)  //3000 =3s is the milliseconds how much time the message need to be diplayed.
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>
+
+<!--width="370px" height="400px"-->
